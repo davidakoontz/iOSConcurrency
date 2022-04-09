@@ -28,3 +28,12 @@ class UsersListViewModel: ObservableObject {
         
     }
 }
+
+extension UsersListViewModel  {
+    convenience init(forPreview: Bool  = false) {
+        self.init()
+        if forPreview {
+            self.users =  User.mockUsers
+        }
+    }
+}

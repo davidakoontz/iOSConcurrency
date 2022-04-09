@@ -18,17 +18,22 @@
 import SwiftUI
 
 struct UsersListView: View {
-    @StateObject var vm = UsersListViewModel()
+#warning("remove the forPreview argument or set to false before shipping to AppStore")
+    @StateObject var vm = UsersListViewModel(forPreview: true)
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(vm.users) { user in
-                    VStack(alignment: .leading) {
-                        Text(user.name)
-                            .font(.title)
-                        Text(user.email)
+                    NavigationLink {
+                        PostsListView(userId: user.id)
+                    } label:  {
+                        VStack(alignment: .leading) {
+                            Text(user.name)
+                                .font(.title)
+                            Text(user.email)
                             
+                        }
                     }
                 }
             }
