@@ -10,7 +10,9 @@ import Foundation
 struct APIService {
     let urlString: String
     
-    func getUsers(completion: @escaping (Result<[User], APIError>) -> Void) {
+    func getJSON<T: Decodable>(dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
+                                keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
+                                completion: @escaping (Result<T, APIError>) -> Void) {
         // old  method of dealing with concurrency -   compkletion handler
         // @esccaping  because the completion function will escape the timeframe/scope of the calling code
         guard
@@ -41,8 +43,12 @@ struct APIService {
             }
             
             let decoder  = JSONDecoder()
+            // set  passed in optional properties
+            decoder.dateDecodingStrategy = dateDecodingStrategy
+            decoder.keyDecodingStrategy =  keyDecodingStrategy
+            
             do {
-                let decodedData = try decoder.decode([User].self, from: data)
+                let decodedData = try decoder.decode(T.self, from: data)
                 completion(.success(decodedData))
             } catch {
                 completion(.failure(.decodingError))
