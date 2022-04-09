@@ -18,9 +18,26 @@
 import SwiftUI
 
 struct UsersListView: View {
+    @StateObject var vm = UsersListViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(vm.users) { user in
+                    VStack(alignment: .leading) {
+                        Text(user.name)
+                            .font(.title)
+                        Text(user.email)
+                            
+                    }
+                }
+            }
+            .navigationTitle("Users")
+            .listStyle(.plain)
+            .onAppear{
+                vm.fetchUsers()
+            }
+        }
     }
 }
 
