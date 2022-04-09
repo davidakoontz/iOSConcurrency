@@ -54,3 +54,33 @@ Generic function usin completion handler with Result
 
 Video 2:
 
+This is the second of 6 videos in the Swift Concurrency series.
+In this video we will be introduced to VOODO, a modified MVVM design pattern so that we can create viewmodels and views to display the content that we fetch from our API endpoints.
+We will also be seeing how we can use MockData so that we don't have to always make calls to the API when we design our apps and you will also be introduced to Git Source control using Xcode.
+ 
+Links and Resources
+
+Swift Concurrency Series Playlist:
+https://youtube.com/playlist?list=PLM...
+
+Starter Code Completed Source code for Part 1:
+https://www.dropbox.com/s/35lo8kp147i...
+
+Part 2 Completed Code:
+https://www.dropbox.com/s/sgsw5zpfif2...
+
+Creating, Using and Sharing Code Snippets: https://youtu.be/FrLczxak9rQ
+Xcode and Git Playlist: https://youtu.be/FrLczxak9rQ
+
+Timestamps
+0:00 Introduction
+0:42 Introduction to VOODO
+1:09 Renaming ContentView
+2:06 Creating the UsersListViewModel
+7:18 Creating and using Mock Data
+15:28 PostsListViewModel and View
+21:26  Suppressing Constraint Warnings
+24:00  Source Control
+
+
+Video 3:

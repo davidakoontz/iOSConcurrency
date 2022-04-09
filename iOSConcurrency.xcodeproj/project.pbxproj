@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6305052F28020BA300DCC6BF /* iOSConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305052E28020BA300DCC6BF /* iOSConcurrencyApp.swift */; };
-		6305053128020BA300DCC6BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305053028020BA300DCC6BF /* ContentView.swift */; };
+		6305053128020BA300DCC6BF /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305053028020BA300DCC6BF /* UsersListView.swift */; };
 		6305053328020BA700DCC6BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6305053228020BA700DCC6BF /* Assets.xcassets */; };
 		6305053628020BA700DCC6BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6305053528020BA700DCC6BF /* Preview Assets.xcassets */; };
 		6305053F28020D6A00DCC6BF /* ReadME.text in Resources */ = {isa = PBXBuildFile; fileRef = 6305053E28020D6A00DCC6BF /* ReadME.text */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		6305052B28020BA300DCC6BF /* iOSConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6305052E28020BA300DCC6BF /* iOSConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConcurrencyApp.swift; sourceTree = "<group>"; };
-		6305053028020BA300DCC6BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6305053028020BA300DCC6BF /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
 		6305053228020BA700DCC6BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6305053528020BA700DCC6BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6305053E28020D6A00DCC6BF /* ReadME.text */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadME.text; sourceTree = "<group>"; };
@@ -61,11 +61,11 @@
 		6305052D28020BA300DCC6BF /* iOSConcurrency */ = {
 			isa = PBXGroup;
 			children = (
+				6305054928021F0600DCC6BF /* Views */,
 				630505462802132F00DCC6BF /* Services */,
 				630505412802111100DCC6BF /* Models */,
 				6305054028020FD800DCC6BF /* Info.plist */,
 				6305052E28020BA300DCC6BF /* iOSConcurrencyApp.swift */,
-				6305053028020BA300DCC6BF /* ContentView.swift */,
 				6305053228020BA700DCC6BF /* Assets.xcassets */,
 				6305053428020BA700DCC6BF /* Preview Content */,
 			);
@@ -95,6 +95,14 @@
 				630505472802134F00DCC6BF /* APIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		6305054928021F0600DCC6BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6305053028020BA300DCC6BF /* UsersListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6305053128020BA300DCC6BF /* ContentView.swift in Sources */,
+				6305053128020BA300DCC6BF /* UsersListView.swift in Sources */,
 				630505482802134F00DCC6BF /* APIService.swift in Sources */,
 				630505432802112400DCC6BF /* User.swift in Sources */,
 				6305052F28020BA300DCC6BF /* iOSConcurrencyApp.swift in Sources */,
