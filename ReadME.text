@@ -1,0 +1,56 @@
+
+//
+//  ReadME.swift
+//  iOSConcurrency
+//
+//  Created by David on 4/9/22.
+
+https://www.youtube.com/watch?v=S5PYdqfyroI
+
+
+  From Coding with  Chris -  Swift Concurrency
+  Lesson 1- 6 Creating Models and an APIService
+  by Stweart  Lench
+  6 part series:
+      JSON Decoding
+      APIService creation & improvements
+      Network calls
+      Error Handling
+      more... so much  more.
+
+Swift Concurrency Series Playlist:
+https://youtube.com/playlist?list=PLM...
+
+Project Resources:
+https://www.dropbox.com/s/jqo3vwy496e...
+
+Completed Source code for Part 1:
+https://www.dropbox.com/s/35lo8kp147i...
+
+JSON Placeholder API: https://jsonplaceholder.typicode.com
+Duck Model Editor: https://apps.apple.com/ca/app/ducky-m...
+QuickType: https://app.quicktype.io
+JSON and Codable Protocol Series: https://www.youtube.com/playlist?list...
+Demystifying Completion Handlers and Asynchronous Functions: https://youtu.be/tuHcwRe61KE
+A Better Result: https://youtu.be/AIb3CQH8_jg
+Introduction to Generics in Swift: https://youtu.be/NY0LFoHQUbk
+
+
+Video 1:  The models & and APIService
+
+Timestamps
+0:00 Introduction
+1:17 Add App Icon and Launch Screen
+3:00 Introducing JSON Placeholder
+3:40 Creating Models for the JSON Objects
+8:27 Creating an APIService to fetch all users
+16:02 Creating an APIError enum and using the Result type in completion handler
+19:55  Making the APIService fetch function generic
+
+
+Create Models from JSON
+APIService  to fetch JSON
+Generic function usin completion handler with Result
+
+Video 2:
+
