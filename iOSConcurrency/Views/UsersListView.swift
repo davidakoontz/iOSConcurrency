@@ -19,7 +19,7 @@ import SwiftUI
 
 struct UsersListView: View {
 #warning("remove the forPreview argument or set to false before shipping to AppStore")
-    @StateObject var vm = UsersListViewModel(forPreview: true)
+    @StateObject var vm = UsersListViewModel(forPreview: false)
     
     var body: some View {
         NavigationView {
@@ -37,6 +37,11 @@ struct UsersListView: View {
                     }
                 }
             }
+            .overlay(content: {
+                if vm.isLoading {
+                    ProgressView()      // show the spinning cursorb
+                }
+            })
             .navigationTitle("Users")
             .listStyle(.plain)
             .onAppear{

@@ -9,6 +9,7 @@ import Foundation
 
 class PostsListViewModel: ObservableObject {
     @Published var posts: [Post] = []
+    @Published var isLoading: Bool = false
     
     var userId:  Int?
     
@@ -17,16 +18,27 @@ class PostsListViewModel: ObservableObject {
         
         if let userId = userId  {
             let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/users/\(userId)/posts")
-            apiService.getJSON{(result: Result<[Post], APIError>) in
-                switch result {
-                case .success(let posts):
-                    DispatchQueue.main.async {
-                        self.posts = posts
+            
+            isLoading.toggle()      // show the progress cursor
+            // to test the progress cursor use a delay AND
+            // in VM set     @StateObject var vm = PostsListViewModel(forPreview: false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                apiService.getJSON{(result: Result<[Post], APIError>) in
+                    defer {
+                        DispatchQueue.main.async {
+                            self.isLoading.toggle()
+                        }
                     }
-                case .failure(let error):
-                    print(error)
+                    switch result {
+                    case .success(let posts):
+                        DispatchQueue.main.async {
+                            self.posts = posts
+                        }
+                    case .failure(let error):
+                        print(error)
+                    }
+                    
                 }
-                
             }
         }
     }

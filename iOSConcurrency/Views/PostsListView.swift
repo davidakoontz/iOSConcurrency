@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PostsListView: View {
 #warning("remove the forPreview argument or set to false before shipping to AppStore")
-    @StateObject var vm = PostsListViewModel(forPreview: true)
+    @StateObject var vm = PostsListViewModel(forPreview: false)
     var userId:  Int?
     
     var body: some View {
@@ -26,6 +26,11 @@ struct PostsListView: View {
                     }
                 }
             }
+            .overlay(content: {
+                if vm.isLoading {
+                    ProgressView()      // show the spinning cursorb
+                }
+            })
             .navigationTitle("Posts")
             .navigationBarTitleDisplayMode(.inline)
             .listStyle(.plain)
