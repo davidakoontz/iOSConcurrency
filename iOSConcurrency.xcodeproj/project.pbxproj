@@ -15,6 +15,7 @@
 		630505432802112400DCC6BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630505422802112400DCC6BF /* User.swift */; };
 		63050545280211F000DCC6BF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63050544280211F000DCC6BF /* Post.swift */; };
 		630505482802134F00DCC6BF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630505472802134F00DCC6BF /* APIService.swift */; };
+		6393F92B2802209800766CED /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6393F92A2802209800766CED /* UsersListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		630505422802112400DCC6BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		63050544280211F000DCC6BF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		630505472802134F00DCC6BF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		6393F92A2802209800766CED /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		6305052D28020BA300DCC6BF /* iOSConcurrency */ = {
 			isa = PBXGroup;
 			children = (
+				6305054A28021FB300DCC6BF /* ViewModels */,
 				6305054928021F0600DCC6BF /* Views */,
 				630505462802132F00DCC6BF /* Services */,
 				630505412802111100DCC6BF /* Models */,
@@ -103,6 +106,14 @@
 				6305053028020BA300DCC6BF /* UsersListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6305054A28021FB300DCC6BF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6393F92A2802209800766CED /* UsersListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6305053128020BA300DCC6BF /* UsersListView.swift in Sources */,
+				6393F92B2802209800766CED /* UsersListViewModel.swift in Sources */,
 				630505482802134F00DCC6BF /* APIService.swift in Sources */,
 				630505432802112400DCC6BF /* User.swift in Sources */,
 				6305052F28020BA300DCC6BF /* iOSConcurrencyApp.swift in Sources */,
